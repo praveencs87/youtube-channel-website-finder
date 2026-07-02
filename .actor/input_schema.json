@@ -1,0 +1,16 @@
+{
+    "title": "YouTube Channel Website Finder Input",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "channelUrls": {
+            "title": "YouTube Channel URLs",
+            "type": "array",
+            "description": "List of YouTube channel URLs to scrape.",
+            "editor": "requestListSources",
+            "default": [{"url": "https://www.youtube.com/@mkbhd"}],
+            "prefill": [{"url": "https://www.youtube.com/@mkbhd"}]
+        }
+    },
+    "required": ["channelUrls"]
+}

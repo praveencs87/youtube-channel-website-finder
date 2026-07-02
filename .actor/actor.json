@@ -1,0 +1,24 @@
+{
+    "actorSpecification": 1,
+    "name": "youtube-channel-website-finder",
+    "title": "YouTube Channel Website Finder",
+    "description": "Instantly extract the primary website and social media links from any YouTube channel. Essential for lead generation and outreach.",
+    "version": "0.0",
+    "input": "./input_schema.json",
+    "dockerfile": "../Dockerfile",
+    "minMemoryMbytes": 256,
+    "maxMemoryMbytes": 1024,
+    "pricingModel": "PAY_PER_EVENT",
+    "pricingEvents": [
+        {
+            "eventName": "apify-actor-start",
+            "pricePerEvent": 0.00005,
+            "description": "Charged once when Actor starts"
+        },
+        {
+            "eventName": "channel-processed",
+            "pricePerEvent": 0.001,
+            "description": "Charged per YouTube channel successfully scraped for links"
+        }
+    ]
+}
