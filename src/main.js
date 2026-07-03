@@ -1,3 +1,4 @@
+import { armKillSwitch, disarmKillSwitch } from './utils/timeoutManager.js';
 import { Actor } from 'apify';
 import { CheerioCrawler, log } from 'crawlee';
 
@@ -175,7 +176,9 @@ try {
     log.info(`Starting YouTube crawler for ${normalizedUrls.length} channels...`);
     
     await crawler.addRequests(normalizedUrls);
+    armKillSwitch(crawler);
     await crawler.run();
+    disarmKillSwitch();
 
     log.info(`🎉 Finished! Processed ${processedCount} channels successfully.`);
 } catch (error) {
