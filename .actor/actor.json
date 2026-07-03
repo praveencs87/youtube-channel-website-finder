@@ -1,42 +1,45 @@
 {
-    "actorSpecification": 1,
-    "name": "youtube-channel-website-finder",
-    "title": "YouTube Channel Website Finder",
-    "description": "Instantly extract the primary website and social media links from any YouTube channel. Essential for lead generation and outreach.",
-    "version": "0.0",
-    "input": "./input_schema.json",
-    "dockerfile": "../Dockerfile",
-    "minMemoryMbytes": 1024,
-    "maxMemoryMbytes": 4096,
-    "pricingModel": "PAY_PER_EVENT",
-    "pricingEvents": [
-        {
-            "eventName": "apify-actor-start",
-            "pricePerEvent": 0.00005,
-            "description": "Charged once when Actor starts"
-        },
-        {
-            "eventName": "channel-processed",
-            "pricePerEvent": 0.001,
-            "description": "Charged per YouTube channel successfully scraped for links"
-        },
-        {
-            "eventName": "lead-extracted",
-            "pricePerEvent": 0.005,
-            "description": "Charged per lead extracted"
-        }
-    ],
-    "isPublic": true,
-    "seoTitle": "YouTube Channel Website Finder | Apify Actor",
-    "seoDescription": "Instantly extract the primary website and social media links from any YouTube channel. Essential for lead generation and outreach.",
-    "categories": [
-        "BUSINESS",
-        "DATA_EXTRACTION",
-        "LEAD_GENERATION"
-    ],
-    "defaultRunOptions": {
-        "build": "latest",
-        "timeoutSecs": 1800,
-        "memoryMbytes": 4096
+  "actorSpecification": 1,
+  "name": "youtube-channel-website-finder",
+  "title": "YouTube Channel Website Finder",
+  "description": "Instantly extract the primary website and social media links from any YouTube channel. Essential for lead generation and outreach.",
+  "version": "0.0",
+  "input": "./input_schema.json",
+  "dockerfile": "../Dockerfile",
+  "minMemoryMbytes": 1024,
+  "maxMemoryMbytes": 4096,
+  "pricingModel": "PAY_PER_EVENT",
+  "pricingEvents": [
+    {
+      "eventName": "apify-actor-start",
+      "pricePerEvent": 0.00005,
+      "description": "Charged once when Actor starts"
+    },
+    {
+      "eventName": "channel-processed",
+      "pricePerEvent": 0.001,
+      "description": "Charged per YouTube channel successfully scraped for links"
+    },
+    {
+      "eventName": "lead-extracted",
+      "pricePerEvent": 0.005,
+      "description": "Charged per lead extracted"
     }
+  ],
+  "isPublic": true,
+  "seoTitle": "YouTube Channel Website Finder | Apify Actor",
+  "seoDescription": "Instantly extract the primary website and social media links from any YouTube channel. Essential for lead generation and outreach.",
+  "categories": [
+    "BUSINESS",
+    "DATA_EXTRACTION",
+    "LEAD_GENERATION"
+  ],
+  "defaultRunOptions": {
+    "build": "latest",
+    "timeoutSecs": 1800,
+    "memoryMbytes": 4096
+  },
+  "storages": {
+    "dataset": "./dataset_schema.json"
+  }
 }
